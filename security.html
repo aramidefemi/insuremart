@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>InsureMart</title>
+		<link rel="icon" href="assets/img/logo.png" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/font-awesome/css/all.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/onboarding.css" />
+		<link rel="stylesheet" href="assets/css/dashboard.css" />
+	</head>
+	<body>
+		<div class="body-wrapper">
+			<div id="side-nav">
+				<div class="sidebar-header">
+					<img src="assets/img/logo.png" class="img-fluid" />
+				</div>
+				<div class="px-3">
+					<hr class="bg-white" />
+				</div>
+				<div class="row mt-3">
+					<a href="dashboard.html" class="text-decoration-none">
+						<div class="sidebar-menu menu-text pt-3 pb-2 text-center">
+							<span class="material-icons">home</span>
+							<p class="fw-light mt-2">Home</p>
+						</div>
+					</a>
+				</div>
+				<div class="row">
+					<div class="sidebar-menu menu-text pt-3 mb-3 pb-2 text-center">
+						<span class="material-icons">verified_user</span>
+						<p class="fw-light mt-2">My Insurance</p>
+					</div>
+				</div>
+				<div class="px-3">
+					<hr class="bg-white" />
+				</div>
+				<div class="row">
+					<div class="sidebar-menu menu-text pt-3 mb-4 pb-2 text-center">
+						<span class="material-icons">credit_card</span>
+						<p class="fw-light mt-2">My Cards & Add</p>
+					</div>
+				</div>
+				<div class="row">
+					<a href="settings.html" class="text-decoration-none">
+						<div class="sidebar-menu active menu-text pt-3 mb-4 pb-2 text-center">
+							<span class="material-icons">settings</span>
+							<p class="fw-light mt-2">Other Settings</p>
+						</div>
+					</a>
+				</div>
+				<div class="row">
+					<div class="sidebar-menu menu-text pt-3 mb-4 pb-2 text-center">
+						<span class="material-icons">support_agent</span>
+						<p class="fw-light mt-2">Help & Support</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="sidebar-menu menu-text pt-3 mb-4 pb-2 text-center">
+						<img src="assets/icons/info.svg" />
+						<p class="fw-light mt-2">About Us</p>
+					</div>
+				</div>
+				<div class="px-3">
+					<hr class="bg-white" />
+				</div>
+			</div>
+			<div id="wrapper">
+				<div class="row">
+					<div class="col-md-6 me-auto">
+						<h3 class="text-dark">Settings</h3>
+					</div>
+					<div class="col-md-5 col-12 ms-auto text-end">
+						<span class="material-icons align-middle px-sm-3 px-0">notifications</span>
+						<div class="dropdown d-inline user-dropdown">
+							<button
+								class="btn dropdown-toggle py-2 profile-dropdown notif-dropdown"
+								role="button"
+								id="dropdownMenuLink"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								<div class="avatar d-inline"><img src="assets/img/avatar.png" /></div>
+								Joshua Hawkins
+							</button>
+							<ul class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuLink">
+								<li>
+									<a class="dropdown-item py-1" href="#">
+										<span class="material-icons align-middle text-green pe-3">edit</span>
+										<span class="align-middle">Edit Profile</span>
+									</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#"
+										><span class="material-icons align-middle text-green pe-3">arrow_circle_up</span> Logout</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-huge">
+					<div class="col-md-3 border-end">
+						<div class="nav flex-column">
+							<li class="nav-item side-panel py-2 my-2">
+								<a class="nav-link text-dark" href="settings.html"
+									><span class="material-icons align-middle pe-2">edit</span> Edit Profile
+									<span class="material-icons align-middle float-end">chevron_right</span>
+								</a>
+							</li>
+							<li class="nav-item side-panel py-2 my-2">
+								<a class="nav-link text-dark" href="socials.html">
+									<span class="material-icons align-middle pe-2">facebook</span> Connect Socials
+									<span class="material-icons align-middle float-end">chevron_right</span>
+								</a>
+							</li>
+							<li class="nav-item side-panel py-2 my-2">
+								<a class="nav-link text-dark" href="notifications.html">
+									<span class="material-icons align-middle pe-2">notifications</span> Notification Settings
+									<span class="material-icons align-middle float-end">chevron_right</span>
+								</a>
+							</li>
+							<li class="nav-item side-panel active py-2 my-2">
+								<a class="nav-link text-dark" href="security.html">
+									<span class="material-icons align-middle pe-2">lock</span>Security & Password
+									<span class="material-icons align-middle float-end">chevron_right</span>
+								</a>
+							</li>
+						</div>
+					</div>
+					<div class="col-md-9 px-0 px-sm-5">
+						<div class="row">
+							<button type="button" class="notif-switch" data-bs-toggle="modal" data-bs-target="#bvnModal">
+								<span class="float-start">BVN</span>
+								<span class="float-end small text-grey">
+									Connected <span class="material-icons align-middle">chevron_right</span>
+								</span>
+							</button>
+							<div class="modal fade" id="bvnModal" tabindex="-1" aria-labelledby="bvnModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-body px-4 py-4">
+											<button
+												type="button"
+												class="btn-close float-start ms-0"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											></button>
+											<h5 class="modal-title text-center" id="bvnModalLabel">BVN</h5>
+										</div>
+										<div class="modal-body pb-5">
+											<form class="px-3">
+												<div class="row">
+													<div class="mb-3">
+														<label class="form-label">BVN</label>
+														<input type="text" class="form-control mart-input" placeholder="10-digit number" />
+													</div>
+												</div>
+												<div class="row">
+													<div class="d-grid">
+														<button class="btn btn-secondary-main py-3 text-uppercase">Verify & Save</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12 mt-2 notif-switch">
+								<span class="float-start">ID Verification</span>
+								<span class="float-end small text-grey">
+									Not verified <span class="material-icons align-middle">chevron_right</span>
+								</span>
+							</div>
+
+							<div class="col-md-12 mt-2 notif-switch">
+								<span class="float-start">Utility Bill</span>
+								<span class="float-end small text-grey">
+									Not Connected <span class="material-icons align-middle">chevron_right</span>
+								</span>
+							</div>
+							<button type="button" class="mt-2 notif-switch" data-bs-toggle="modal" data-bs-target="#phoneModal">
+								<span class="float-start">Phone Number</span>
+								<span class="float-end small text-grey">
+									Not Connected <span class="material-icons align-middle">chevron_right</span>
+								</span>
+							</button>
+
+							<div
+								class="modal fade"
+								id="phoneModal"
+								tabindex="-1"
+								aria-labelledby="phoneModalLabel"
+								aria-hidden="true"
+							>
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-body px-4 py-4">
+											<button
+												type="button"
+												class="btn-close float-start ms-0"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											></button>
+											<h5 class="modal-title text-center" id="phoneModalLabel">Phone Number</h5>
+										</div>
+										<div class="modal-body pb-5">
+											<form class="px-3">
+												<div class="row">
+													<div class="mb-3">
+														<label class="form-label">Phone Number</label>
+														<input type="text" class="form-control mart-input" placeholder="Phone number" />
+													</div>
+												</div>
+												<div class="row">
+													<div class="d-grid">
+														<button class="btn btn-secondary-main py-3 text-uppercase">Send Otp</button>
+													</div>
+												</div>
+											</form>
+											<form class="px-3 mt-3">
+												<div class="row">
+													<div class="mb-3">
+														<label class="form-label text-muted">OTP</label>
+														<input type="text" class="form-control mart-input" placeholder="6-digit code" disabled />
+													</div>
+												</div>
+												<div class="row">
+													<div class="d-grid">
+														<button class="btn btn-secondary-main py-3 text-uppercase disabled">Verify & Save</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12 mt-2 notif-switch">
+								<span class="float-start">2-step Verification</span>
+								<span class="float-end small text-grey">
+									Off <span class="material-icons align-middle">chevron_right</span>
+								</span>
+							</div>
+							<button type="button" class="mt-2 notif-switch" data-bs-toggle="modal" data-bs-target="#kinModal">
+								<span class="float-start">Next of kin</span>
+								<span class="float-end small text-grey">
+									Not added <span class="material-icons align-middle">chevron_right</span>
+								</span>
+							</button>
+
+							<div class="modal fade" id="kinModal" tabindex="-1" aria-labelledby="kinModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered modal-lg">
+									<div class="modal-content">
+										<div class="modal-body px-4 py-4">
+											<button
+												type="button"
+												class="btn-close float-start ms-0"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											></button>
+											<h5 class="modal-title text-center" id="kinModalLabel">Next of Kin</h5>
+										</div>
+										<div class="modal-body pb-5">
+											<form class="px-3">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="mb-3">
+															<label class="form-label">First Name</label>
+															<input type="text" class="form-control mart-input" placeholder="First Name" />
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="mb-3">
+															<label class="form-label">Last Name</label>
+															<input type="text" class="form-control mart-input" placeholder="Last Name" />
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="mb-3">
+															<label class="form-label">Relationship Type</label>
+															<select class="form-select mart-input">
+																<option>Mother</option>
+																<option>Father</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="mb-3">
+															<label class="form-label">Email Address</label>
+															<input type="email" class="form-control mart-input" placeholder="Email Address" />
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="mb-3">
+															<label class="form-label">Phone Number</label>
+															<input type="text" class="form-control mart-input" placeholder="Phone Number" />
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6 mx-auto">
+														<div class="d-grid">
+															<button class="btn btn-secondary-main py-3 text-uppercase">Save</button>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12 mt-2 notif-switch">
+								<span class="float-start">Change Password</span>
+								<span class="float-end small text-grey">
+									<span class="material-icons align-middle">chevron_right</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Profile Goes here -->
+			</div>
+		</div>
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript">
+			// This function toggles the profile dropdown
+			var profileDropdown = document.querySelector('.profile-dropdown');
+
+			profileDropdown.addEventListener('click', () => {
+				profileDropdown.classList.toggle('profile-active');
+			});
+
+			document.querySelector('.avatar').addEventListener('click', () => {
+				console.log('Please work na');
+				document.querySelector('.profile-dropdown').classList.toggle('drop-active');
+				// document.querySelector('.profile-dropdown').style.borderBottomRightRadius = '0';
+			});
+
+			window.onclick = function (event) {
+				if (!event.target.matches('.profile-dropdown')) {
+					if (profileDropdown.classList.contains('profile-active')) {
+						profileDropdown.classList.remove('profile-active');
+						// profileDropdown.classList.remove('drop-active');
+					}
+				}
+			};
+
+			// function profileToggler(params) {}
+		</script>
+	</body>
+</html>
