@@ -13,6 +13,8 @@
 		<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/font-awesome/css/all.min.css" />
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/vendor/dropzone.css" />
+		<link rel="stylesheet" href="assets/css/onboarding.css" />
 		<link rel="stylesheet" href="assets/css/dashboard.css" />
 	</head>
 	<body>
@@ -107,7 +109,7 @@
 					</div>
 				</div>
 				<div class="row mt-4">
-					<div class="col-md-6 mb-3">
+					<div class="col-md-6 mb-3" data-bs-toggle="modal" data-bs-target="#carModal">
 						<div class="card mart-card p-4">
 							<img src="assets/img/car.png" height="50px" width="100px" />
 							<h3 class="mt-4 text-white">Car Insurance</h3>
@@ -116,6 +118,94 @@
 							</p>
 						</div>
 					</div>
+					<!-- #car Modal -->
+					<div class="modal fade" id="carModal" tabindex="-1" aria-labelledby="carModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered modal-lg">
+							<div class="modal-content">
+								<div class="progress" style="height: 30px">
+									<div
+										class="progress-bar bg-primary-main progress-bar-rounded"
+										role="progressbar"
+										style="width: 25%"
+										aria-valuenow="25"
+										aria-valuemin="0"
+										aria-valuemax="100"
+									></div>
+								</div>
+								<div class="modal-body bg-teal px-4 py-2">
+									<div class="row">
+										<div class="col-md-6">
+											<p class="small text-green fw-bold">New Car Insurance Plan</p>
+											<span class="text-muted small">Step 1 of 5</span>
+											<h5>Car Details</h5>
+										</div>
+										<div class="col-md-6">
+											<div class="social-icon mt-5 ms-auto bg-white" data-bs-dismiss="modal">
+												<button type="button" class="btn-close float-end" aria-label="Close"></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-body pb-5">
+									<form class="px-3">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="mb-3">
+													<label class="form-label">Car Brand</label>
+													<input type="text" class="form-control mart-input" placeholder="e.g Toyota" />
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="mb-3">
+													<label class="form-label">Car Model</label>
+													<input type="text" class="form-control mart-input" placeholder="e.g Camry" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="mb-3">
+													<label class="form-label">Manufacture Year</label>
+													<input type="text" class="form-control mart-input" placeholder="e.g 2021" />
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="mb-3">
+													<label class="form-label">Registration Number</label>
+													<input type="text" class="form-control mart-input" placeholder="10-digit number" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="mb-3">
+													<label class="form-label">Chasis Number</label>
+													<input type="text" class="form-control mart-input" placeholder="10-digit number" />
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="mb-3">
+													<label class="form-label">Engine Number</label>
+													<input type="text" class="form-control mart-input" placeholder="10-digit number" />
+												</div>
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-md-6 mx-auto">
+												<div class="d-grid">
+													<button class="btn btn-secondary-main py-3 text-uppercase">Continue</button>
+												</div>
+												<div class="d-grid mt-3">
+													<button class="btn btn-secondary-outline py-3 text-uppercase">Continue</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div class="col-md-6 mb-3">
 						<div class="card mart-card p-4">
 							<img src="assets/img/heart-beat.png" height="50px" width="50px" />
@@ -146,9 +236,21 @@
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<form action="/upload" class="dropzone needsclick dz-clickable" id="my-awesome-dropzone">
+						<div class="dz-message needsclick">
+							<button type="button" class="dz-button">Drop files here or click to upload.</button><br />
+							<span class="note needsclick"
+								>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span
+							>
+						</div>
+						<!-- <input type="file" name="file" /> -->
+					</form>
+				</div>
 			</div>
 		</div>
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/vendor/dropzone.js"></script>
 		<script type="text/javascript">
 			// This function toggles the profile dropdown
 			var profileDropdown = document.querySelector('.profile-dropdown');

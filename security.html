@@ -174,19 +174,141 @@
 								</div>
 							</div>
 
-							<div class="col-md-12 mt-2 notif-switch">
+							<button type="button" class="mt-2 notif-switch" data-bs-toggle="modal" data-bs-target="#idModal">
 								<span class="float-start">ID Verification</span>
 								<span class="float-end small text-grey">
 									Not verified <span class="material-icons align-middle">chevron_right</span>
 								</span>
+							</button>
+							<div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="idModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered modal-lg">
+									<div class="modal-content">
+										<div class="modal-body px-4 py-4">
+											<button
+												type="button"
+												class="btn-close float-start ms-0"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											></button>
+											<h5 class="modal-title text-center" id="idModalLabel">ID Verification</h5>
+										</div>
+										<div class="modal-body pb-5">
+											<form class="px-3">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="mb-3">
+															<label class="form-label">ID Front</label>
+															<div class="d-block border bg-grey rounded text-center p-5">
+																<label type="button" class="file-uploader btn btn-secondary-main py-3 px-4">
+																	Upload Image
+																	<input type="file" class="" placeholder="10-digit number" hidden />
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="mb-3">
+															<label class="form-label">ID Back</label>
+															<div class="d-block border bg-grey rounded text-center p-5">
+																<label type="button" class="file-uploader btn btn-secondary-main py-3 px-4">
+																	Upload Image
+																	<input type="file" class="" placeholder="10-digit number" hidden />
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="mb-3">
+															<label class="form-label">ID Type</label>
+															<select class="form-select mart-input">
+																<option>ID Type</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="mb-3">
+															<label class="form-label">ID Number</label>
+															<input type="text" class="form-control mart-input" placeholder="ID Number" />
+														</div>
+													</div>
+												</div>
+												<div class="row mt-3">
+													<div class="col-md-6 mx-auto">
+														<div class="d-grid">
+															<button class="btn btn-secondary-main py-3 text-uppercase">Verify & Save</button>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
 							</div>
 
-							<div class="col-md-12 mt-2 notif-switch">
+							<button class="mt-2 notif-switch" data-bs-toggle="modal" data-bs-target="#utilityModal">
 								<span class="float-start">Utility Bill</span>
 								<span class="float-end small text-grey">
 									Not Connected <span class="material-icons align-middle">chevron_right</span>
 								</span>
+							</button>
+							<div
+								class="modal fade"
+								id="utilityModal"
+								tabindex="-1"
+								aria-labelledby="utilityModalLabel"
+								aria-hidden="true"
+							>
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-body px-4 py-4">
+											<button
+												type="button"
+												class="btn-close float-start ms-0"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											></button>
+											<h5 class="modal-title text-center" id="utilityModalLabel">Utility Bill</h5>
+										</div>
+										<div class="modal-body pb-5">
+											<form class="px-3">
+												<div class="row">
+													<div class="col-md-12">
+														<div class="mb-3">
+															<label class="form-label">ID Front</label>
+															<div class="d-block border bg-grey rounded text-center p-5">
+																<label type="button" class="file-uploader btn btn-secondary-main py-3 px-4">
+																	Upload Image
+																	<input type="file" class="" placeholder="10-digit number" hidden />
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<div class="mb-3">
+															<label class="form-label">Utility Bill Type</label>
+															<select class="form-select mart-input">
+																<option>Utility Bill Type</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="row mt-3">
+													<div class="col-md-6 mx-auto">
+														<div class="d-grid">
+															<button class="btn btn-secondary-main py-3 text-uppercase">Save</button>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
 							</div>
+
 							<button type="button" class="mt-2 notif-switch" data-bs-toggle="modal" data-bs-target="#phoneModal">
 								<span class="float-start">Phone Number</span>
 								<span class="float-end small text-grey">
@@ -244,12 +366,13 @@
 								</div>
 							</div>
 
-							<div class="col-md-12 mt-2 notif-switch">
+							<button class="mt-2 notif-switch">
 								<span class="float-start">2-step Verification</span>
 								<span class="float-end small text-grey">
 									Off <span class="material-icons align-middle">chevron_right</span>
 								</span>
-							</div>
+							</button>
+
 							<button type="button" class="mt-2 notif-switch" data-bs-toggle="modal" data-bs-target="#kinModal">
 								<span class="float-start">Next of kin</span>
 								<span class="float-end small text-grey">
@@ -323,11 +446,67 @@
 								</div>
 							</div>
 
-							<div class="col-md-12 mt-2 notif-switch">
+							<button class="mt-2 notif-switch" data-bs-toggle="modal" data-bs-target="#passwordModal">
 								<span class="float-start">Change Password</span>
 								<span class="float-end small text-grey">
 									<span class="material-icons align-middle">chevron_right</span>
 								</span>
+							</button>
+
+							<div
+								class="modal fade"
+								id="passwordModal"
+								tabindex="-1"
+								aria-labelledby="passwordModalLabel"
+								aria-hidden="true"
+							>
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-body px-4 py-4">
+											<button
+												type="button"
+												class="btn-close float-start ms-0"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											></button>
+											<h5 class="modal-title text-center" id="passwordModalLabel">Change Password</h5>
+										</div>
+										<div class="modal-body pb-5">
+											<form class="px-3">
+												<div class="row">
+													<div class="mb-3">
+														<label class="form-label">Current Password</label>
+														<input type="password" class="form-control mart-input" placeholder="Current Password" />
+														<span class="material-icons field-icon text-grey">visibility</span>
+													</div>
+												</div>
+												<div class="row">
+													<div class="mb-3">
+														<label class="form-label">New Password</label>
+														<input type="password" class="form-control mart-input" placeholder="New Password" />
+														<span class="material-icons field-icon text-grey">visibility</span>
+													</div>
+												</div>
+												<div class="row">
+													<div class="mb-3">
+														<label class="form-label">Re-enter New Password</label>
+														<input
+															type="password"
+															class="form-control mart-input"
+															placeholder="Re-enter New Password"
+														/>
+														<span class="material-icons field-icon text-grey">visibility</span>
+													</div>
+												</div>
+												<div class="row">
+													<div class="d-grid">
+														<button class="btn btn-secondary-main py-3 text-uppercase">Change & Save</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

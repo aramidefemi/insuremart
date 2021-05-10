@@ -30,6 +30,22 @@ body {
 	background-color: #023859;
 }
 
+.bg-primary-main {
+	background-color: #2269b3;
+}
+
+.bg-grey {
+	background-color: #fafafa;
+}
+
+.bg-teal {
+	background: #03a68810;
+}
+
+.progress-bar-rounded {
+	border-radius: 0px 50px 50px 0px;
+}
+
 /* TYPOGRAPHY */
 .text-grey {
 	color: rgba(34, 34, 34, 0.5);
@@ -56,6 +72,13 @@ body {
 .btn-secondary-main {
 	background: #03588c;
 	color: #fff;
+	border-radius: 8px;
+	font-weight: bold;
+}
+
+.btn-secondary-outline {
+	border: 1px solid#03588c;
+	color: #03588c;
 	border-radius: 8px;
 	font-weight: bold;
 }
